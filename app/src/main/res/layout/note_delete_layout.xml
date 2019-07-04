@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp">
+
+    <TextView
+        android:id="@+id/delete_dialog_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/delete_dialog_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/delete_dialog_text"
+        android:layout_margin="10dp"
+        android:text="If you delete this note, you can't recover it !"
+        android:textSize="17sp" />
+
+    <com.rey.material.widget.EditText
+        android:id="@+id/delete_dialog_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/delete_dialog_info"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:text=""
+        android:textSize="15sp"
+        android:theme="@style/Material.Widget.EditText"
+        app:et_dividerAnimDuration="350"
+        app:et_dividerColor="@color/colorPrimary"
+        app:et_dividerErrorColor="#F00"
+        app:et_error="Incorrect password"
+        app:et_labelEnable="true"
+        app:et_labelTextColor="@color/colorPrimary"
+        app:et_supportMode="helper"
+        app:et_supportTextErrorColor="#F00" />
+
+    <TextView
+        android:id="@+id/delete_dialog_delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/delete_dialog_input"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Delete"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/delete_dialog_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/delete_dialog_delete_btn"
+        android:layout_alignBottom="@id/delete_dialog_delete_btn"
+        android:layout_marginEnd="20dp"
+        android:layout_toStartOf="@id/delete_dialog_delete_btn"
+        android:text="Cancel"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
